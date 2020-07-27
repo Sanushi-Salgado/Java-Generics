@@ -1,5 +1,9 @@
 package com.sanushi.generics;
 
+/**
+ * @author Sanushi Salgado
+ *
+ */
 public class GenericMethods {
 
 	// This is a generic method

@@ -1,6 +1,7 @@
 package com.sanushi.generics;
 
 
+// This is a generic class with multiple type parameters
 class Elements<T extends Number, S> {
 	private T number;
 	private S element;
@@ -17,28 +18,31 @@ class Elements<T extends Number, S> {
 }
 
 
+/**
+ * @author Sanushi Salgado
+ *
+ */
 public class GenericClassWithMultipleTypeParams {
 	
 	public static void main(String[] args) {
-		Elements e1 = new Elements( new Integer(10), "Bob" );
+		Elements<Integer, String> e1 = new Elements<Integer, String>( new Integer(10), "Bob" );
 		e1.printElements();
 		
-		Elements e2 = new Elements( new Double(10.56), "Mike" );
+		Elements<Double, String> e2 = new Elements<Double, String>( new Double(10.56), "Mike" );
 		e2.printElements();
 		
-		Elements e3 = new Elements( new Float(10.56F), "Ann" );
+		Elements<Float, String> e3 = new Elements<Float, String>( new Float(10.56F), "Ann" );
 		e3.printElements();
 		
-		Elements e4 = new Elements( new Integer(8), new Integer(3) );
+		Elements<Integer, Integer> e4 = new Elements<Integer, Integer>( new Integer(8), new Integer(3) );
 		e4.printElements();
 		
-		Elements e5 = new Elements( new Double(4.3), 'c' );
+		Elements<Double, Character> e5 = new Elements<Double, Character>( new Double(4.3), 'c' );
 		e5.printElements();
 		
-		/*
 		// This will give a compile error since the 1st argument should be a subclass of Number
-		Elements e6 = new Elements( "Jack", 'c' ); 
-		e6.printElements();*/
+		// Elements e6 = new Elements( "Jack", 'c' ); 
+		// e6.printElements();
 		
 	}
 	
